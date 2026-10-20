@@ -63,6 +63,32 @@ h1 { margin: 0 0 24px; font: 400 clamp(60px, 7vw, 88px)/1.08 Georgia, "Times New
 .contact-links a { display: inline-flex; gap: 10px; align-items: center; padding: 6px 0; }
 .contact-links .primary-link { border: 1px solid var(--accent); border-radius: 5px; padding: 8px 15px; background: var(--accent); color: var(--paper); text-decoration: none; }
 .contact-links .primary-link:hover { background: #245261; }
+.portrait-studio { margin-top: 22px; }
+.generate-image { display: flex; align-items: center; gap: 9px; width: fit-content; min-height: 42px; padding: 8px 14px; border: 1px solid var(--line); border-radius: 24px; background: #ffffffb3; color: var(--ink); cursor: pointer; list-style: none; font-size: 12px; }
+.generate-image::-webkit-details-marker { display: none; }
+.generate-image::marker { content: ""; }
+.generate-image:hover { border-color: var(--accent); background: var(--tint); color: var(--accent); }
+.generate-image:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+.generate-image > svg { width: 18px; height: 18px; color: var(--accent); }
+.hide-image-label, .portrait-studio[open] .generate-label { display: none; }
+.portrait-studio[open] .hide-image-label { display: inline; }
+.portrait-conversation { max-width: 520px; margin-top: 26px; }
+.portrait-prompt { width: fit-content; max-width: 100%; margin: 0 0 25px auto; padding: 10px 16px; border: 1px solid var(--line); border-radius: 16px 16px 4px 16px; background: var(--tint); font-size: 13px; }
+.portrait-response > .response-label { margin: 0 0 13px; }
+.portrait-card { max-width: 380px; margin: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: #fff; }
+.portrait-surface { position: relative; overflow: hidden; aspect-ratio: 1; background: var(--tint); }
+.portrait-image { display: block; width: 100%; height: auto; transition: opacity .5s ease, filter .6s ease; }
+.portrait-card figcaption { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 49px; padding: 12px 15px; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; }
+.portrait-format { flex: none; color: var(--accent); font: 10px var(--mono); }
+.portrait-note { margin: 10px 0 0; color: var(--muted); font-size: 11px; }
+.portrait-progress { display: none; position: absolute; inset: 0; align-items: center; justify-content: center; gap: 7px; background: linear-gradient(115deg, var(--tint), #ffffffb3, var(--tint)); background-size: 220% 100%; animation: portrait-shimmer 1.6s linear infinite; }
+.portrait-progress > span { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: portrait-pulse 1s ease-in-out infinite alternate; }
+.portrait-progress > span:nth-child(2) { animation-delay: .2s; }
+.portrait-progress > span:nth-child(3) { animation-delay: .4s; }
+.is-generating .portrait-progress { display: flex; }
+.is-generating .portrait-image { opacity: 0; filter: blur(12px); }
+@keyframes portrait-shimmer { to { background-position: -220% 0; } }
+@keyframes portrait-pulse { from { opacity: .3; transform: translateY(2px); } to { opacity: 1; transform: translateY(-2px); } }
 section { border-top: 1px solid var(--line); padding: 29px 0 36px; }
 .section-heading { display: flex; align-items: baseline; gap: 14px; margin-bottom: 30px; }
 .section-number { color: var(--accent); font: 10px/1.5 var(--mono); }
@@ -129,6 +155,8 @@ footer > a { margin-left: auto; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .portrait-image { transition: none; }
+  .portrait-progress, .portrait-progress > span { animation: none; }
   .is-streaming .stream-word[data-pending] { opacity: 1; }
   .stream-cursor::after, .stream-toggle { display: none; }
 }
@@ -139,6 +167,7 @@ footer > a { margin-left: auto; }
   .site-header { padding: 0 0 16px; }
   .layout { display: block; }
   .sidebar, .stream-toggle, .stream-cursor::after, .skip-link, .response-header, .ocean-mark, .seaweed-mark { display: none; }
+  .portrait-studio { display: none; }
   .hero { padding: 24px 0; }
   h1 { font-size: 40pt; }
   .intro { font-size: 18pt; }

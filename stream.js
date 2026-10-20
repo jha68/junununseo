@@ -1,5 +1,30 @@
 /* Progressive enhancement: all portfolio content is already in the HTML.
    This never fetches, removes, or rewrites the portfolio's text. */
+// A native disclosure also reveals the supplied portrait without JavaScript.
+(() => {
+  const studio = document.getElementById('portrait-studio');
+  if (!studio) return;
+  const status = studio.querySelector('.portrait-status');
+  const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let timer;
+
+  function reveal() {
+    window.clearTimeout(timer);
+    studio.classList.remove('is-generating');
+    status.textContent = 'Here’s a face to go with the name.';
+  }
+
+  studio.addEventListener('toggle', () => {
+    reveal();
+    if (!studio.open || motion.matches) return;
+    status.textContent = 'Generating an image…';
+    studio.classList.add('is-generating');
+    timer = window.setTimeout(reveal, 1200);
+  });
+  motion.addEventListener('change', event => { if (event.matches) reveal(); });
+  window.addEventListener('pagehide', reveal);
+})();
+
 (() => {
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const toggle = document.getElementById('stream-toggle');

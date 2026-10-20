@@ -6,6 +6,7 @@
 
 - [Full plain-text portfolio](https://junununseo.com/portfolio.txt): Introduction, education, engineering experience, all four projects, skills, and contact information. No JavaScript or interaction required.
 - [Website](https://junununseo.com/): The same portfolio in semantic HTML, with ProfilePage and Person JSON-LD. Text is present in the initial response; the optional entrance animation does not generate content.
+- [Portrait](https://junununseo.com/assets/junseo-ha.jpg): Original photograph of Junseo Ha, revealed by the website’s playful “Generate an image” control. This interaction displays a supplied photo and does not call an image-generation service.
 
 ## Sections
 
