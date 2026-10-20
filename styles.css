@@ -1,11 +1,12 @@
 :root {
   color-scheme: light;
-  --paper: #faf9f6;
-  --ink: #252723;
-  --muted: #686b62;
-  --line: #dedfd6;
-  --accent: #496147;
-  --tint: #edf0e7;
+  --paper: #f8faf9;
+  --ink: #233849;
+  --muted: #5b6d77;
+  --line: #d8e3e6;
+  --accent: #326b7b;
+  --tint: #eaf2f4;
+  --sea: #6e9ba7;
   --mono: ui-monospace, SFMono-Regular, Consolas, monospace;
 }
 
@@ -13,12 +14,12 @@
 html { scroll-behavior: smooth; scroll-padding-top: 32px; }
 body {
   margin: 0;
-  background: var(--paper);
+  background: radial-gradient(ellipse 720px 460px at 100% 0, #e8f1f4, transparent), var(--paper);
   color: var(--ink);
   font: 16px/1.7 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   -webkit-font-smoothing: antialiased;
 }
-::selection { background: #dce5d3; color: var(--ink); }
+::selection { background: #dbe9ee; color: var(--ink); }
 a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 5px; }
 a:hover { color: var(--accent); }
 a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; border-radius: 2px; }
@@ -46,7 +47,8 @@ button { font: inherit; }
 .sidebar nav a:hover .nav-number { color: var(--accent); }
 .text-link { display: inline-block; margin-top: 36px; color: var(--muted); font-size: 11px; }
 main { min-width: 0; }
-.hero { padding: 60px 0 54px; }
+.hero { position: relative; padding: 60px 0 54px; }
+.ocean-mark { position: absolute; right: 0; bottom: 56px; width: 132px; height: 32px; color: var(--sea); opacity: .55; pointer-events: none; }
 .response-header { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px 14px; min-height: 32px; margin-bottom: 34px; }
 .response-label { display: flex; align-items: center; gap: 10px; color: var(--muted); font: 11px var(--mono); }
 .stream-toggle { border: 1px solid var(--line); border-radius: 5px; padding: 6px 10px; background: transparent; color: var(--muted); cursor: pointer; font: 11px/1.6 var(--mono); }
@@ -58,7 +60,7 @@ h1 { margin: 0 0 24px; font: 400 clamp(60px, 7vw, 88px)/1.08 Georgia, "Times New
 .contact-links { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 25px; margin-top: 28px; font-size: 12px; }
 .contact-links a { display: inline-flex; gap: 10px; align-items: center; padding: 6px 0; }
 .contact-links .primary-link { border: 1px solid var(--accent); border-radius: 5px; padding: 8px 15px; background: var(--accent); color: var(--paper); text-decoration: none; }
-.contact-links .primary-link:hover { background: #364e35; }
+.contact-links .primary-link:hover { background: #245261; }
 section { border-top: 1px solid var(--line); padding: 29px 0 36px; }
 .section-heading { display: flex; align-items: baseline; gap: 14px; margin-bottom: 30px; }
 .section-number { color: var(--accent); font: 10px/1.5 var(--mono); }
@@ -106,6 +108,7 @@ footer > a { margin-left: auto; }
   .sidebar nav { display: flex; justify-content: space-between; gap: 10px; }
   .sidebar nav a { font-size: 10px; min-height: 40px; }
   .hero { padding: 34px 0 38px; }
+  .ocean-mark { bottom: 10px; width: 88px; height: 22px; }
   .response-header { margin-bottom: 28px; }
   h1 { font-size: clamp(58px, 12vw, 76px); }
   .intro { font-size: 25px; }
@@ -130,7 +133,7 @@ footer > a { margin-left: auto; }
   .page { width: 100%; }
   .site-header { padding: 0 0 16px; }
   .layout { display: block; }
-  .sidebar, .stream-toggle, .stream-cursor::after, .skip-link, .response-header { display: none; }
+  .sidebar, .stream-toggle, .stream-cursor::after, .skip-link, .response-header, .ocean-mark { display: none; }
   .hero { padding: 24px 0; }
   h1 { font-size: 40pt; }
   .intro { font-size: 18pt; }
