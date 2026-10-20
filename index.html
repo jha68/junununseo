@@ -61,9 +61,9 @@
         <p class="sidebar-label">Junseo Ha<br><span>Software engineer</span></p>
         <nav aria-label="On this page">
           <a href="#about"><span class="nav-number" aria-hidden="true">00</span> Introduction</a>
-          <a href="#projects"><span class="nav-number" aria-hidden="true">01</span> Selected projects</a>
+          <a href="#education"><span class="nav-number" aria-hidden="true">01</span> Education</a>
           <a href="#experience"><span class="nav-number" aria-hidden="true">02</span> Experience</a>
-          <a href="#education"><span class="nav-number" aria-hidden="true">03</span> Education</a>
+          <a href="#projects"><span class="nav-number" aria-hidden="true">03</span> Selected projects</a>
           <a href="#skills"><span class="nav-number" aria-hidden="true">04</span> Skills</a>
         </nav>
         <a class="text-link" href="/portfolio.txt">Plain-text portfolio <span class="external-icon" aria-hidden="true"></span></a>
@@ -100,9 +100,63 @@
           </svg>
         </div>
 
-        <section id="projects" aria-labelledby="projects-title">
+        <section class="education" id="education" aria-labelledby="education-title">
           <div class="section-heading">
             <span class="section-number" aria-hidden="true">01 /</span>
+            <h2 id="education-title" data-stream>Education</h2>
+          </div>
+          <div class="job-heading">
+            <h3 data-stream>Georgia Institute of Technology</h3>
+            <span class="date" data-stream><time datetime="2022-01">Jan 2022</time> – <time datetime="2024-12">Dec 2024</time></span>
+          </div>
+          <p data-stream>B.S. Computer Science · Artificial Intelligence &amp; Media</p>
+          <p data-stream>Atlanta, GA · Overall GPA: 3.77/4.0 · Major GPA: 3.87/4.0</p>
+          <svg class="seaweed-mark" viewBox="0 0 120 104" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <path d="M38 101C29 88 36 78 29 65C24 57 26 48 34 42C28 60 46 69 42 81C37 90 43 98 45 101" opacity=".7" />
+            <path d="M55 101C40 79 64 60 52 36C45 21 48 12 57 3C51 23 67 35 64 50C59 69 50 82 62 101" />
+            <path d="M73 101C67 88 88 78 82 63C78 53 80 43 91 35C82 53 98 66 91 79C84 91 80 93 82 101" opacity=".8" />
+            <path d="M14 101Q34 98 55 101T107 100" opacity=".4" />
+          </svg>
+        </section>
+
+        <section id="experience" aria-labelledby="experience-title">
+          <div class="section-heading">
+            <span class="section-number" aria-hidden="true">02 /</span>
+            <h2 id="experience-title" data-stream>Experience</h2>
+          </div>
+          <article class="job">
+            <div class="job-heading">
+              <h3 data-stream>Republic of Korea Navy</h3>
+              <span class="date" data-stream><time datetime="2025-06">Jun 2025</time> – Present</span>
+            </div>
+            <p class="role" data-stream>AI Developer (Military Service) · LLM Project Lead<br>Expected service completion: <time datetime="2027-02">Feb 2027</time></p>
+            <p data-stream>Lead development of a Navy-wide LLM assistant for administrative workflows and knowledge retrieval. Represent a seven-developer team in meetings with Navy generals and senior leadership to propose technical designs, development plans, and project direction.</p>
+            <p data-stream>Established Open WebUI and context-aware LLM pipelines. Built an intelligent RAG router and selective policy injection to reduce unnecessary context use, plus a military terminology module for document comprehension and drafting. Implemented image search and MMR retrieval to reduce redundant chunks and improve retrieval diversity and relevance.</p>
+            <p class="tech" data-stream>Open WebUI · RAG · Maximal Marginal Relevance (MMR)</p>
+          </article>
+          <article class="job">
+            <div class="job-heading">
+              <h3 data-stream>Aimgonna</h3>
+              <span class="date" data-stream><time datetime="2025-01">Jan</time> – <time datetime="2025-06">Jun 2025</time></span>
+            </div>
+            <p class="role" data-stream>LLM &amp; Front-end Engineer</p>
+            <p data-stream>Built automated LLM evaluations for query routing and supplement recommendations. Added a general-answer branch, refined prompts, and expanded RAG with web-search context, raising routing accuracy from 70% to 92% and category-match scores from 38% to 52%. Shipped Health Profile, a dashboard with card-based UI and modal editors for 10 health data types.</p>
+            <p class="tech" data-stream>LangGraph · LangSmith · React</p>
+          </article>
+          <article class="job">
+            <div class="job-heading">
+              <h3 data-stream>NextIts</h3>
+              <span class="date" data-stream><time datetime="2023-05">May</time> – <time datetime="2023-08">Aug 2023</time></span>
+            </div>
+            <p class="role" data-stream>Intern</p>
+            <p data-stream>Developed announcements, customer support, and login features for the Gong Chal System (GCS), a public bidding platform specializing in insurance offers. Collaborated with the team to improve its UI and UX.</p>
+            <p class="tech" data-stream>JavaScript · MySQL · HTML</p>
+          </article>
+        </section>
+
+        <section id="projects" aria-labelledby="projects-title">
+          <div class="section-heading">
+            <span class="section-number" aria-hidden="true">03 /</span>
             <h2 id="projects-title" data-stream>Selected projects</h2>
             <span class="section-note">Ideas into interfaces</span>
           </div>
@@ -143,60 +197,6 @@
             </div>
             <span class="project-kind" data-stream>Data analysis</span>
           </article>
-        </section>
-
-        <section id="experience" aria-labelledby="experience-title">
-          <div class="section-heading">
-            <span class="section-number" aria-hidden="true">02 /</span>
-            <h2 id="experience-title" data-stream>Experience</h2>
-          </div>
-          <article class="job">
-            <div class="job-heading">
-              <h3 data-stream>Republic of Korea Navy</h3>
-              <span class="date" data-stream><time datetime="2025-06">Jun 2025</time> – Present</span>
-            </div>
-            <p class="role" data-stream>AI Developer (Military Service) · LLM Project Lead<br>Expected service completion: <time datetime="2027-02">Feb 2027</time></p>
-            <p data-stream>Lead development of a Navy-wide LLM assistant for administrative workflows and knowledge retrieval. Represent a seven-developer team in meetings with Navy generals and senior leadership to propose technical designs, development plans, and project direction.</p>
-            <p data-stream>Established Open WebUI and context-aware LLM pipelines. Built an intelligent RAG router and selective policy injection to reduce unnecessary context use, plus a military terminology module for document comprehension and drafting. Implemented image search and MMR retrieval to reduce redundant chunks and improve retrieval diversity and relevance.</p>
-            <p class="tech" data-stream>Open WebUI · RAG · Maximal Marginal Relevance (MMR)</p>
-          </article>
-          <article class="job">
-            <div class="job-heading">
-              <h3 data-stream>Aimgonna</h3>
-              <span class="date" data-stream><time datetime="2025-01">Jan</time> – <time datetime="2025-06">Jun 2025</time></span>
-            </div>
-            <p class="role" data-stream>LLM &amp; Front-end Engineer</p>
-            <p data-stream>Built automated LLM evaluations for query routing and supplement recommendations. Added a general-answer branch, refined prompts, and expanded RAG with web-search context, raising routing accuracy from 70% to 92% and category-match scores from 38% to 52%. Shipped Health Profile, a dashboard with card-based UI and modal editors for 10 health data types.</p>
-            <p class="tech" data-stream>LangGraph · LangSmith · React</p>
-          </article>
-          <article class="job">
-            <div class="job-heading">
-              <h3 data-stream>NextIts</h3>
-              <span class="date" data-stream><time datetime="2023-05">May</time> – <time datetime="2023-08">Aug 2023</time></span>
-            </div>
-            <p class="role" data-stream>Intern</p>
-            <p data-stream>Developed announcements, customer support, and login features for the Gong Chal System (GCS), a public bidding platform specializing in insurance offers. Collaborated with the team to improve its UI and UX.</p>
-            <p class="tech" data-stream>JavaScript · MySQL · HTML</p>
-          </article>
-        </section>
-
-        <section class="education" id="education" aria-labelledby="education-title">
-          <div class="section-heading">
-            <span class="section-number" aria-hidden="true">03 /</span>
-            <h2 id="education-title" data-stream>Education</h2>
-          </div>
-          <div class="job-heading">
-            <h3 data-stream>Georgia Institute of Technology</h3>
-            <span class="date" data-stream><time datetime="2022-01">Jan 2022</time> – <time datetime="2024-12">Dec 2024</time></span>
-          </div>
-          <p data-stream>B.S. Computer Science · Artificial Intelligence &amp; Media</p>
-          <p data-stream>Atlanta, GA · Overall GPA: 3.77/4.0 · Major GPA: 3.87/4.0</p>
-          <svg class="seaweed-mark" viewBox="0 0 120 104" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-            <path d="M38 101C29 88 36 78 29 65C24 57 26 48 34 42C28 60 46 69 42 81C37 90 43 98 45 101" opacity=".7" />
-            <path d="M55 101C40 79 64 60 52 36C45 21 48 12 57 3C51 23 67 35 64 50C59 69 50 82 62 101" />
-            <path d="M73 101C67 88 88 78 82 63C78 53 80 43 91 35C82 53 98 66 91 79C84 91 80 93 82 101" opacity=".8" />
-            <path d="M14 101Q34 98 55 101T107 100" opacity=".4" />
-          </svg>
         </section>
 
         <section class="skills" id="skills" aria-labelledby="skills-title">

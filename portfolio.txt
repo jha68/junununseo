@@ -10,25 +10,13 @@ INTRODUCTION
 Building with AI. Making it useful on the web.
 I build LLM applications, retrieval pipelines, and web experiences. I’m currently an AI developer and LLM project lead in the Republic of Korea Navy, with a computer science degree from Georgia Tech.
 
-SELECTED PROJECTS
+EDUCATION
 
-Anchorive — LLM document review prototype
-LLM Pipeline Developer | Mar – Jun 2026
-Built multi-stage review workflows and benchmarked 20+ open-source LLMs. Designed a LangGraph workflow for structured handover documents with source traceability and schema validation. Specified human review and scoped revisions with patch validation, preservation of user edits, and versioned history.
-Technologies: Python · FastAPI · OpenRouter · Pydantic · LangGraph
-
-ARC reasoning agent
-Repository: https://github.com/jha68/KBAI-to-ARC
-A knowledge-based AI framework using symbolic reasoning and rules to solve abstract visual tasks in the ARC Prize Challenge. Achieved the highest score in class, 3× the second-highest score.
-Technologies: Python · Symbolic AI
-
-TerraVision
-A geothermal power data visualization with hexagonal mapping, color and opacity controls, plant features, and bookmarks. Owned all front-end development, including map interactions and CSS.
-Technologies: Vue · JavaScript · Data visualization
-
-New York Taxi Data Analysis
-Analyzed NYC TLC trip records and tuned a linear regression model’s hyperparameters to improve predictive accuracy. Compared performance metrics to identify the best configurations.
-Technologies: Python · Linear regression
+Georgia Institute of Technology
+B.S. Computer Science · Artificial Intelligence & Media
+Jan 2022 – Dec 2024
+Atlanta, GA
+Overall GPA: 3.77/4.0 · Major GPA: 3.87/4.0
 
 EXPERIENCE
 
@@ -49,13 +37,25 @@ May – Aug 2023
 Developed announcements, customer support, and login features for the Gong Chal System (GCS), a public bidding platform specializing in insurance offers. Collaborated with the team to improve its UI and UX.
 Technologies: JavaScript · MySQL · HTML
 
-EDUCATION
+SELECTED PROJECTS
 
-Georgia Institute of Technology
-B.S. Computer Science · Artificial Intelligence & Media
-Jan 2022 – Dec 2024
-Atlanta, GA
-Overall GPA: 3.77/4.0 · Major GPA: 3.87/4.0
+Anchorive — LLM document review prototype
+LLM Pipeline Developer | Mar – Jun 2026
+Built multi-stage review workflows and benchmarked 20+ open-source LLMs. Designed a LangGraph workflow for structured handover documents with source traceability and schema validation. Specified human review and scoped revisions with patch validation, preservation of user edits, and versioned history.
+Technologies: Python · FastAPI · OpenRouter · Pydantic · LangGraph
+
+ARC reasoning agent
+Repository: https://github.com/jha68/KBAI-to-ARC
+A knowledge-based AI framework using symbolic reasoning and rules to solve abstract visual tasks in the ARC Prize Challenge. Achieved the highest score in class, 3× the second-highest score.
+Technologies: Python · Symbolic AI
+
+TerraVision
+A geothermal power data visualization with hexagonal mapping, color and opacity controls, plant features, and bookmarks. Owned all front-end development, including map interactions and CSS.
+Technologies: Vue · JavaScript · Data visualization
+
+New York Taxi Data Analysis
+Analyzed NYC TLC trip records and tuned a linear regression model’s hyperparameters to improve predictive accuracy. Compared performance metrics to identify the best configurations.
+Technologies: Python · Linear regression
 
 SKILLS
 
