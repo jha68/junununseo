@@ -1,17 +1,18 @@
 # Junseo Ha
 
-> Software engineer based in Seoul, South Korea, working across LLM applications and front-end development. Computer science graduate of Georgia Institute of Technology.
+> Software engineer based in Seoul, South Korea, building LLM applications, retrieval pipelines, and web experiences. Currently an AI developer and LLM project lead in the Republic of Korea Navy. Computer science graduate of Georgia Institute of Technology.
 
 ## Portfolio
 
-- [Full plain-text portfolio](https://junununseo.com/portfolio.txt): Introduction, all three projects, engineering experience, education, technologies, and contact information. No JavaScript or interaction required.
+- [Full plain-text portfolio](https://junununseo.com/portfolio.txt): Introduction, all four projects, engineering experience, education, skills, and contact information. No JavaScript or interaction required.
 - [Website](https://junununseo.com/): The same portfolio in semantic HTML, with ProfilePage and Person JSON-LD. Text is present in the initial response; the optional entrance animation does not generate content.
 
 ## Sections
 
-- [Selected projects](https://junununseo.com/#projects): ARC reasoning agent, TerraVision, and HiveFinder.
-- [Experience](https://junununseo.com/#experience): Aimgonna (January–June 2025) and NextIts (May–August 2023).
-- [Education](https://junununseo.com/#education): B.S. Computer Science, Artificial Intelligence & Media, Georgia Institute of Technology, 2022–2024.
+- [Selected projects](https://junununseo.com/#projects): Anchorive, an LLM document review prototype (March–June 2026); ARC reasoning agent, which achieved the highest class score at 3× the runner-up; TerraVision; and New York Taxi Data Analysis.
+- [Experience](https://junununseo.com/#experience): Republic of Korea Navy, AI Developer (Military Service) and LLM Project Lead (June 2025–present; expected service completion February 2027), leading a Navy-wide LLM assistant and representing a seven-developer team; Aimgonna (January–June 2025), improving routing accuracy from 70% to 92% and category-match scores from 38% to 52%; and NextIts (May–August 2023).
+- [Education](https://junununseo.com/#education): B.S. Computer Science, Artificial Intelligence & Media, Georgia Institute of Technology, January 2022–December 2024. Overall GPA: 3.77/4.0; major GPA: 3.87/4.0.
+- [Skills](https://junununseo.com/#skills): Java, Python, C, C#, JavaScript, TypeScript; Vue, React, LangGraph, LangSmith, FastAPI, Pydantic, vLLM; MySQL, PostgreSQL, Qdrant, HTML, CSS, Unity, Android Studio, Git, Docker. Korean (native) and English (professional).
 
 ## Contact and profiles
 
@@ -22,4 +23,3 @@
 ## Project repositories
 
 - [ARC reasoning agent](https://github.com/jha68/KBAI-to-ARC)
-- [HiveFinder](https://github.com/git-mad/hiveFinder2023)

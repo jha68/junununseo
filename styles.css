@@ -73,7 +73,9 @@ h2 { margin: 0; font-size: 13px; font-weight: 550; letter-spacing: -.015em; }
 .project:last-child { padding-bottom: 0; }
 .project-index { padding-top: 5px; color: var(--muted); font: 10px/1.7 var(--mono); }
 h3 { margin: 0 0 6px; font-size: 17px; line-height: 1.5; font-weight: 550; letter-spacing: -.025em; }
-.project p, .job p, .education > p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.8; }
+.project p, .job p, .education > p, .skills > p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.8; }
+.project .role { margin-bottom: 10px; color: var(--ink); font-size: 12px; }
+.job > p + p, .skills > p + p { margin-top: 10px; }
 .project .tech, .job .tech { margin-top: 10px; color: var(--accent); font: 10px/1.8 var(--mono); }
 .project-kind { align-self: start; margin-top: 3px; padding: 3px 7px; border: 1px solid var(--line); border-radius: 3px; color: var(--muted); font: 9px/1.5 var(--mono); }
 .job + .job { margin-top: 29px; }
@@ -107,7 +109,7 @@ footer > a { margin-left: auto; }
   .layout { display: block; }
   .sidebar { position: static; padding-top: 17px; }
   .sidebar-label, .sidebar .text-link, .nav-number { display: none; }
-  .sidebar nav { display: flex; justify-content: space-between; gap: 10px; }
+  .sidebar nav { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0 10px; }
   .sidebar nav a { font-size: 10px; min-height: 40px; }
   .hero { padding: 34px 0 72px; }
   .ocean-mark { bottom: 6px; width: 112px; height: 56px; }

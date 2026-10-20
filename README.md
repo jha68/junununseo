@@ -30,7 +30,7 @@ All substantive portfolio content and links are in the initial HTML response. Re
 
 The canonical origin is `https://junununseo.com/`, matching `CNAME`. Update those URLs together if the domain changes. Crawlers still decide whether and when to index the site; serving these files does not guarantee indexing.
 
-Portfolio content is based on Resume V2. The original résumé is not included.
+Portfolio content is based on the updated English résumé, including ROK Navy experience and Anchorive (March–June 2026). The original résumé is not included.
 
 ## Hosting
 

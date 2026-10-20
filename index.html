@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Junseo Ha — software engineer focused on AI and thoughtful web experiences. Georgia Tech computer science graduate based in Seoul.">
+  <meta name="description" content="Junseo Ha — software engineer and LLM project lead in the Republic of Korea Navy. Building LLM applications, RAG pipelines, and web experiences. Georgia Tech CS graduate.">
   <meta name="color-scheme" content="light">
   <meta name="theme-color" content="#f8faf9">
   <meta name="robots" content="index, follow">
   <meta property="og:type" content="profile">
   <meta property="og:title" content="Junseo Ha — Software Engineer">
-  <meta property="og:description" content="Building with AI. Making it useful on the web. Projects, engineering experience, and contact information.">
+  <meta property="og:description" content="LLM applications, RAG pipelines, and useful web experiences. Explore Junseo Ha’s projects, Navy AI work, and engineering experience.">
   <meta property="og:url" content="https://junununseo.com/">
   <meta property="profile:first_name" content="Junseo">
   <meta property="profile:last_name" content="Ha">
   <link rel="canonical" href="https://junununseo.com/">
   <link rel="alternate" type="text/plain" title="Junseo Ha — plain-text portfolio" href="/portfolio.txt">
   <link rel="icon" href="/favicon.svg?v=e21d38aab2d5" type="image/svg+xml">
-  <link rel="stylesheet" href="/styles.css?v=525e44361368">
+  <link rel="stylesheet" href="/styles.css?v=f0c3a1fdc5a1">
   <title>Junseo Ha — Software Engineer</title>
   <script type="application/ld+json">
   {
@@ -35,10 +35,12 @@
       "jobTitle": "Software Engineer",
       "url": "https://junununseo.com/",
       "email": "mailto:jha68@gatech.edu",
-      "description": "Software engineer working across LLM applications and front-end development, with a computer science background from Georgia Tech.",
+      "description": "Software engineer and LLM project lead in the Republic of Korea Navy, building LLM applications, RAG pipelines, and web experiences. Computer science graduate of Georgia Tech.",
+      "worksFor": { "@type": "Organization", "name": "Republic of Korea Navy" },
       "homeLocation": { "@type": "Place", "name": "Seoul, South Korea" },
       "alumniOf": { "@type": "CollegeOrUniversity", "name": "Georgia Institute of Technology" },
-      "knowsAbout": ["LLM applications", "Front-end development", "Python", "JavaScript", "React", "Vue", "Java", "Symbolic AI"],
+      "knowsAbout": ["LLM applications", "Retrieval-augmented generation", "LLM evaluation", "Front-end development", "Python", "JavaScript", "TypeScript", "React", "Vue", "LangGraph", "LangSmith", "FastAPI", "Pydantic", "vLLM", "Qdrant", "Java", "Symbolic AI"],
+      "knowsLanguage": ["Korean", "English"],
       "sameAs": ["https://github.com/jha68", "https://www.linkedin.com/in/junseo-ha-097087250/"]
     }
   }
@@ -62,6 +64,7 @@
           <a href="#projects"><span class="nav-number" aria-hidden="true">01</span> Selected projects</a>
           <a href="#experience"><span class="nav-number" aria-hidden="true">02</span> Experience</a>
           <a href="#education"><span class="nav-number" aria-hidden="true">03</span> Education</a>
+          <a href="#skills"><span class="nav-number" aria-hidden="true">04</span> Skills</a>
         </nav>
         <a class="text-link" href="/portfolio.txt">Plain-text portfolio <span class="external-icon" aria-hidden="true"></span></a>
       </aside>
@@ -75,7 +78,7 @@
           <p class="eyebrow" data-stream>Software engineer · AI &amp; the web</p>
           <h1 data-stream>Junseo Ha.</h1>
           <p class="intro" data-stream>Building with AI.<br>Making it useful on the web.</p>
-          <p class="bio" data-stream>I work across LLM applications and front-end development, with a computer science background from Georgia Tech.</p>
+          <p class="bio" data-stream>I build LLM applications, retrieval pipelines, and web experiences. I’m currently an AI developer and LLM project lead in the Republic of Korea Navy, with a computer science degree from Georgia Tech.</p>
           <nav class="contact-links" aria-label="Contact and profiles">
             <a class="primary-link" href="mailto:jha68@gatech.edu">Let’s talk <span class="external-icon" aria-hidden="true"></span></a>
             <a href="https://github.com/jha68">GitHub <span class="external-icon" aria-hidden="true"></span></a>
@@ -106,29 +109,39 @@
           <article class="project">
             <span class="project-index" aria-hidden="true">01</span>
             <div>
+              <h3 data-stream>Anchorive</h3>
+              <p class="role" data-stream>LLM document review prototype · LLM Pipeline Developer<br><time datetime="2026-03">Mar</time> – <time datetime="2026-06">Jun 2026</time></p>
+              <p data-stream>Built multi-stage review workflows and benchmarked 20+ open-source LLMs. Designed a LangGraph workflow for structured handover documents with source traceability and schema validation. Specified human review and scoped revisions with patch validation, preservation of user edits, and versioned history.</p>
+              <p class="tech" data-stream>Python · FastAPI · OpenRouter · Pydantic · LangGraph</p>
+            </div>
+            <span class="project-kind" data-stream>LLM workflows</span>
+          </article>
+          <article class="project">
+            <span class="project-index" aria-hidden="true">02</span>
+            <div>
               <h3 data-stream><a href="https://github.com/jha68/KBAI-to-ARC" aria-label="ARC reasoning agent GitHub repository">ARC reasoning agent <span class="external-icon" aria-hidden="true"></span></a></h3>
-              <p data-stream>A knowledge-based AI framework using symbolic reasoning and rules to solve abstract visual tasks in the ARC Prize Challenge.</p>
+              <p data-stream>A knowledge-based AI framework using symbolic reasoning and rules to solve abstract visual tasks in the ARC Prize Challenge. Achieved the highest score in class, 3× the second-highest score.</p>
               <p class="tech" data-stream>Python · Symbolic AI</p>
             </div>
             <span class="project-kind" data-stream>Reasoning</span>
           </article>
           <article class="project">
-            <span class="project-index" aria-hidden="true">02</span>
+            <span class="project-index" aria-hidden="true">03</span>
             <div>
               <h3 data-stream>TerraVision</h3>
-              <p data-stream>A geothermal energy visualization with hexagonal mapping, plant creation, and bookmarks. Built the front end and map interactions.</p>
+              <p data-stream>A geothermal power data visualization with hexagonal mapping, color and opacity controls, plant features, and bookmarks. Owned all front-end development, including map interactions and CSS.</p>
               <p class="tech" data-stream>Vue · JavaScript · Data visualization</p>
             </div>
             <span class="project-kind" data-stream>Mapping</span>
           </article>
           <article class="project">
-            <span class="project-index" aria-hidden="true">03</span>
+            <span class="project-index" aria-hidden="true">04</span>
             <div>
-              <h3 data-stream><a href="https://github.com/git-mad/hiveFinder2023" aria-label="HiveFinder GitHub repository">HiveFinder <span class="external-icon" aria-hidden="true"></span></a></h3>
-              <p data-stream>An Android app for exploring library floors and amenities. Led the team and designed navigation, maps, and amenity details.</p>
-              <p class="tech" data-stream>Java · Android Studio</p>
+              <h3 data-stream>New York Taxi Data Analysis</h3>
+              <p data-stream>Analyzed NYC TLC trip records and tuned a linear regression model’s hyperparameters to improve predictive accuracy. Compared performance metrics to identify the best configurations.</p>
+              <p class="tech" data-stream>Python · Linear regression</p>
             </div>
-            <span class="project-kind" data-stream>Mobile</span>
+            <span class="project-kind" data-stream>Data analysis</span>
           </article>
         </section>
 
@@ -139,11 +152,21 @@
           </div>
           <article class="job">
             <div class="job-heading">
+              <h3 data-stream>Republic of Korea Navy</h3>
+              <span class="date" data-stream><time datetime="2025-06">Jun 2025</time> – Present</span>
+            </div>
+            <p class="role" data-stream>AI Developer (Military Service) · LLM Project Lead<br>Expected service completion: <time datetime="2027-02">Feb 2027</time></p>
+            <p data-stream>Lead development of a Navy-wide LLM assistant for administrative workflows and knowledge retrieval. Represent a seven-developer team in meetings with Navy generals and senior leadership to propose technical designs, development plans, and project direction.</p>
+            <p data-stream>Established Open WebUI and context-aware LLM pipelines. Built an intelligent RAG router and selective policy injection to reduce unnecessary context use, plus a military terminology module for document comprehension and drafting. Implemented image search and MMR retrieval to reduce redundant chunks and improve retrieval diversity and relevance.</p>
+            <p class="tech" data-stream>Open WebUI · RAG · Maximal Marginal Relevance (MMR)</p>
+          </article>
+          <article class="job">
+            <div class="job-heading">
               <h3 data-stream>Aimgonna</h3>
               <span class="date" data-stream><time datetime="2025-01">Jan</time> – <time datetime="2025-06">Jun 2025</time></span>
             </div>
             <p class="role" data-stream>LLM &amp; Front-end Engineer</p>
-            <p data-stream>Built LLM evaluations and improved agent routing accuracy from 70% to 92%. Expanded retrieval with web context and shipped a health profile dashboard.</p>
+            <p data-stream>Built automated LLM evaluations for query routing and supplement recommendations. Added a general-answer branch, refined prompts, and expanded RAG with web-search context, raising routing accuracy from 70% to 92% and category-match scores from 38% to 52%. Shipped Health Profile, a dashboard with card-based UI and modal editors for 10 health data types.</p>
             <p class="tech" data-stream>LangGraph · LangSmith · React</p>
           </article>
           <article class="job">
@@ -151,8 +174,8 @@
               <h3 data-stream>NextIts</h3>
               <span class="date" data-stream><time datetime="2023-05">May</time> – <time datetime="2023-08">Aug 2023</time></span>
             </div>
-            <p class="role" data-stream>Engineering Intern</p>
-            <p data-stream>Developed announcements, customer support, and login features for an insurance bidding platform, working with the team to improve its UI and UX.</p>
+            <p class="role" data-stream>Intern</p>
+            <p data-stream>Developed announcements, customer support, and login features for the Gong Chal System (GCS), a public bidding platform specializing in insurance offers. Collaborated with the team to improve its UI and UX.</p>
             <p class="tech" data-stream>JavaScript · MySQL · HTML</p>
           </article>
         </section>
@@ -164,15 +187,27 @@
           </div>
           <div class="job-heading">
             <h3 data-stream>Georgia Institute of Technology</h3>
-            <span class="date" data-stream><time datetime="2022">2022</time> – <time datetime="2024">2024</time></span>
+            <span class="date" data-stream><time datetime="2022-01">Jan 2022</time> – <time datetime="2024-12">Dec 2024</time></span>
           </div>
           <p data-stream>B.S. Computer Science · Artificial Intelligence &amp; Media</p>
+          <p data-stream>Atlanta, GA · Overall GPA: 3.77/4.0 · Major GPA: 3.87/4.0</p>
           <svg class="seaweed-mark" viewBox="0 0 120 104" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
             <path d="M38 101C29 88 36 78 29 65C24 57 26 48 34 42C28 60 46 69 42 81C37 90 43 98 45 101" opacity=".7" />
             <path d="M55 101C40 79 64 60 52 36C45 21 48 12 57 3C51 23 67 35 64 50C59 69 50 82 62 101" />
             <path d="M73 101C67 88 88 78 82 63C78 53 80 43 91 35C82 53 98 66 91 79C84 91 80 93 82 101" opacity=".8" />
             <path d="M14 101Q34 98 55 101T107 100" opacity=".4" />
           </svg>
+        </section>
+
+        <section class="skills" id="skills" aria-labelledby="skills-title">
+          <div class="section-heading">
+            <span class="section-number" aria-hidden="true">04 /</span>
+            <h2 id="skills-title" data-stream>Skills</h2>
+          </div>
+          <p data-stream><strong>Programming:</strong> Java, Python, C, C#, JavaScript, TypeScript</p>
+          <p data-stream><strong>Frameworks &amp; libraries:</strong> Vue, React, LangGraph, LangSmith, FastAPI, Pydantic, vLLM</p>
+          <p data-stream><strong>Databases &amp; tools:</strong> MySQL, PostgreSQL, Qdrant, HTML, CSS, Unity, Android Studio, Git, Docker</p>
+          <p data-stream><strong>Languages:</strong> Korean (native), English (professional)</p>
         </section>
 
         <footer>

@@ -8,38 +8,58 @@ LinkedIn: https://www.linkedin.com/in/junseo-ha-097087250/
 INTRODUCTION
 
 Building with AI. Making it useful on the web.
-I work across LLM applications and front-end development, with a computer science background from Georgia Tech.
+I build LLM applications, retrieval pipelines, and web experiences. I’m currently an AI developer and LLM project lead in the Republic of Korea Navy, with a computer science degree from Georgia Tech.
 
 SELECTED PROJECTS
 
+Anchorive — LLM document review prototype
+LLM Pipeline Developer | Mar – Jun 2026
+Built multi-stage review workflows and benchmarked 20+ open-source LLMs. Designed a LangGraph workflow for structured handover documents with source traceability and schema validation. Specified human review and scoped revisions with patch validation, preservation of user edits, and versioned history.
+Technologies: Python · FastAPI · OpenRouter · Pydantic · LangGraph
+
 ARC reasoning agent
 Repository: https://github.com/jha68/KBAI-to-ARC
-A knowledge-based AI framework using symbolic reasoning and rules to solve abstract visual tasks in the ARC Prize Challenge.
+A knowledge-based AI framework using symbolic reasoning and rules to solve abstract visual tasks in the ARC Prize Challenge. Achieved the highest score in class, 3× the second-highest score.
 Technologies: Python · Symbolic AI
 
 TerraVision
-A geothermal energy visualization with hexagonal mapping, plant creation, and bookmarks. Built the front end and map interactions.
+A geothermal power data visualization with hexagonal mapping, color and opacity controls, plant features, and bookmarks. Owned all front-end development, including map interactions and CSS.
 Technologies: Vue · JavaScript · Data visualization
 
-HiveFinder
-Repository: https://github.com/git-mad/hiveFinder2023
-An Android app for exploring library floors and amenities. Led the team and designed navigation, maps, and amenity details.
-Technologies: Java · Android Studio
+New York Taxi Data Analysis
+Analyzed NYC TLC trip records and tuned a linear regression model’s hyperparameters to improve predictive accuracy. Compared performance metrics to identify the best configurations.
+Technologies: Python · Linear regression
 
 EXPERIENCE
 
+Republic of Korea Navy — AI Developer (Military Service) · LLM Project Lead
+Jun 2025 – Present
+Expected service completion: Feb 2027
+Lead development of a Navy-wide LLM assistant for administrative workflows and knowledge retrieval. Represent a seven-developer team in meetings with Navy generals and senior leadership to propose technical designs, development plans, and project direction.
+Established Open WebUI and context-aware LLM pipelines. Built an intelligent RAG router and selective policy injection to reduce unnecessary context use, plus a military terminology module for document comprehension and drafting. Implemented image search and MMR retrieval to reduce redundant chunks and improve retrieval diversity and relevance.
+Technologies: Open WebUI · RAG · Maximal Marginal Relevance (MMR)
+
 Aimgonna — LLM & Front-end Engineer
 Jan – Jun 2025
-Built LLM evaluations and improved agent routing accuracy from 70% to 92%. Expanded retrieval with web context and shipped a health profile dashboard.
+Built automated LLM evaluations for query routing and supplement recommendations. Added a general-answer branch, refined prompts, and expanded RAG with web-search context, raising routing accuracy from 70% to 92% and category-match scores from 38% to 52%. Shipped Health Profile, a dashboard with card-based UI and modal editors for 10 health data types.
 Technologies: LangGraph · LangSmith · React
 
-NextIts — Engineering Intern
+NextIts — Intern
 May – Aug 2023
-Developed announcements, customer support, and login features for an insurance bidding platform, working with the team to improve its UI and UX.
+Developed announcements, customer support, and login features for the Gong Chal System (GCS), a public bidding platform specializing in insurance offers. Collaborated with the team to improve its UI and UX.
 Technologies: JavaScript · MySQL · HTML
 
 EDUCATION
 
 Georgia Institute of Technology
 B.S. Computer Science · Artificial Intelligence & Media
-2022 – 2024
+Jan 2022 – Dec 2024
+Atlanta, GA
+Overall GPA: 3.77/4.0 · Major GPA: 3.87/4.0
+
+SKILLS
+
+Programming: Java, Python, C, C#, JavaScript, TypeScript
+Frameworks & libraries: Vue, React, LangGraph, LangSmith, FastAPI, Pydantic, vLLM
+Databases & tools: MySQL, PostgreSQL, Qdrant, HTML, CSS, Unity, Android Studio, Git, Docker
+Languages: Korean (native), English (professional)
