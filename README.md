@@ -16,7 +16,7 @@ Then visit `http://localhost:8000`. Root-relative asset URLs match the custom-do
 
 Update content and structured data in `index.html`, styles in `styles.css`, and the entrance interaction in `stream.js`. Keep `portfolio.txt` in sync with portfolio content. Update the summary in `llms.txt` when projects, roles, education, or contact details change.
 
-The layout adapts to mobile and desktop and includes keyboard focus styles, section navigation, a skip link, and a print stylesheet. The animation completes in under five seconds, reserves text layout, and supports showing all text or replaying it. Keyboard focus, scrolling, navigation, and browser find reveal everything immediately. Reduced-motion visitors, direct section links, and visitors without JavaScript see the full content without animation. There is no LLM API call or generated résumé content.
+The layout adapts to mobile and desktop and includes keyboard focus styles, section navigation, a skip link, and a print stylesheet. The animation completes in under five seconds, reserves text layout, and supports showing all text or replaying it. Scrolling keeps the animation running. Keyboard focus, navigation, and browser find reveal everything immediately. Reduced-motion visitors, direct section links, and visitors without JavaScript see the full content without animation. There is no LLM API call or generated résumé content.
 
 ## Crawlers and automated readers
 

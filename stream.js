@@ -82,7 +82,8 @@
     }
 
     toggle.addEventListener('click', () => streaming ? finish() : start());
-    // Navigation, reading, browser find, and printing never have to wait.
+    // Explicit skips, keyboard focus, browser find, and printing never wait.
+    // Scrolling leaves the word-by-word animation running.
     document.addEventListener('focusin', event => {
       if (streaming && event.target !== toggle) finish();
     });
@@ -92,8 +93,6 @@
     document.addEventListener('keydown', event => {
       if (streaming && (event.key === 'Escape' || event.ctrlKey || event.metaKey)) finish();
     });
-    window.addEventListener('wheel', () => { if (streaming) finish(); }, { passive: true });
-    window.addEventListener('touchmove', () => { if (streaming) finish(); }, { passive: true });
     window.addEventListener('beforeprint', finish);
     window.addEventListener('pagehide', finish);
     window.addEventListener('pageshow', event => { if (event.persisted) finish(); });
