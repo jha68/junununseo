@@ -1,0 +1,25 @@
+# Junseo Ha
+
+> Software engineer based in Seoul, South Korea, working across LLM applications and front-end development. Computer science graduate of Georgia Institute of Technology.
+
+## Portfolio
+
+- [Full plain-text portfolio](https://junununseo.com/portfolio.txt): Introduction, all three projects, engineering experience, education, technologies, and contact information. No JavaScript or interaction required.
+- [Website](https://junununseo.com/): The same portfolio in semantic HTML, with ProfilePage and Person JSON-LD. Text is present in the initial response; the optional entrance animation does not generate content.
+
+## Sections
+
+- [Selected projects](https://junununseo.com/#projects): ARC reasoning agent, TerraVision, and HiveFinder.
+- [Experience](https://junununseo.com/#experience): Aimgonna (January–June 2025) and NextIts (May–August 2023).
+- [Education](https://junununseo.com/#education): B.S. Computer Science, Artificial Intelligence & Media, Georgia Institute of Technology, 2022–2024.
+
+## Contact and profiles
+
+- [Email](mailto:jha68@gatech.edu)
+- [GitHub](https://github.com/jha68)
+- [LinkedIn](https://www.linkedin.com/in/junseo-ha-097087250/)
+
+## Project repositories
+
+- [ARC reasoning agent](https://github.com/jha68/KBAI-to-ARC)
+- [HiveFinder](https://github.com/git-mad/hiveFinder2023)

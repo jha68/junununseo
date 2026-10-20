@@ -1,17 +1,41 @@
 # Junseo Ha
 
-A minimal, single-page personal portfolio. Built with semantic HTML and inline CSS; no JavaScript, frameworks, dependencies, or build step.
+A single-page personal portfolio with a word-by-word, LLM-style entrance. Built with semantic HTML, CSS, and optional vanilla JavaScript; no frameworks, dependencies, or build step.
 
 ## Preview
 
-Open `index.html` in a browser, or serve this folder with any static HTTP server.
+Serve the repository root with any static HTTP server, for example:
+
+```sh
+python3 -m http.server 8000
+```
+
+Then visit `http://localhost:8000`. Root-relative asset URLs match the custom-domain hosting configuration.
 
 ## Edit
 
-Update the text, links, and styles directly in `index.html`. The layout adapts to mobile and desktop and includes keyboard focus styles, a skip link, and reduced-motion support.
+Update content and structured data in `index.html`, styles in `styles.css`, and the entrance interaction in `stream.js`. Keep `portfolio.txt` in sync with portfolio content. Update the summary in `llms.txt` when projects, roles, education, or contact details change.
+
+The layout adapts to mobile and desktop and includes keyboard focus styles, section navigation, a skip link, and a print stylesheet. The animation completes in under five seconds, reserves text layout, and supports showing all text or replaying it. Keyboard focus, scrolling, navigation, and browser find reveal everything immediately. Reduced-motion visitors, direct section links, and visitors without JavaScript see the full content without animation. There is no LLM API call or generated résumé content.
+
+## Crawlers and automated readers
+
+All substantive portfolio content and links are in the initial HTML response. Reading requires no JavaScript, scrolling, chatbot prompts, account, or clicks. The animation only changes visual opacity; text stays in the DOM and accessibility tree throughout.
+
+- `portfolio.txt`: complete plain-text portfolio, linked from the page and its alternate metadata.
+- `robots.txt`: allows crawling and points to the sitemap.
+- `sitemap.xml`: identifies the canonical homepage.
+- `llms.txt`: optional discovery guide for automated readers; support varies by crawler.
+- `index.html`: canonical URL, description, Open Graph metadata, and Schema.org `ProfilePage` / `Person` JSON-LD.
+
+The canonical origin is `https://junununseo.com/`, matching `CNAME`. Update those URLs together if the domain changes. Crawlers still decide whether and when to index the site; serving these files does not guarantee indexing.
 
 Portfolio content is based on Resume V2. The original résumé is not included.
 
 ## Hosting
 
-The repository root is ready for any static host. To use GitHub Pages, choose **Settings → Pages → Deploy from a branch → main / (root)**. Hosting is not configured by this draft.
+The live site is [junununseo.com](https://junununseo.com/). GitHub Pages already builds and deploys the repository root automatically when `main` changes. `CNAME` retains the custom domain; no separate hosting service or build workflow is needed.
+
+Completed portfolio updates should be checked, committed, and published to `main` by default, unless local-only work is explicitly requested. Include the latest remote changes before publishing and use a normal fast-forward push. Wait for the matching **pages build and deployment** run to succeed, then verify the live site. Editing local files alone does not update the public URL. GitHub Pages deployment and caching introduce a short delay after a push.
+
+Before committing, run `python3 scripts/version-assets.py` to refresh content-based asset URL versions. Updated CSS, JavaScript, and the favicon then get fresh URLs instead of reusing an earlier cached version. `.nojekyll` keeps publication static, with no Jekyll processing.

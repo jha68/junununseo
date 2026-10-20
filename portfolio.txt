@@ -1,0 +1,45 @@
+Junseo Ha — Software Engineer
+Website: https://junununseo.com/
+Location: Seoul, South Korea
+Email: jha68@gatech.edu
+GitHub: https://github.com/jha68
+LinkedIn: https://www.linkedin.com/in/junseo-ha-097087250/
+
+INTRODUCTION
+
+Building with AI. Making it useful on the web.
+I work across LLM applications and front-end development, with a computer science background from Georgia Tech.
+
+SELECTED PROJECTS
+
+ARC reasoning agent
+Repository: https://github.com/jha68/KBAI-to-ARC
+A knowledge-based AI framework using symbolic reasoning and rules to solve abstract visual tasks in the ARC Prize Challenge.
+Technologies: Python · Symbolic AI
+
+TerraVision
+A geothermal energy visualization with hexagonal mapping, plant creation, and bookmarks. Built the front end and map interactions.
+Technologies: Vue · JavaScript · Data visualization
+
+HiveFinder
+Repository: https://github.com/git-mad/hiveFinder2023
+An Android app for exploring library floors and amenities. Led the team and designed navigation, maps, and amenity details.
+Technologies: Java · Android Studio
+
+EXPERIENCE
+
+Aimgonna — LLM & Front-end Engineer
+Jan – Jun 2025
+Built LLM evaluations and improved agent routing accuracy from 70% to 92%. Expanded retrieval with web context and shipped a health profile dashboard.
+Technologies: LangGraph · LangSmith · React
+
+NextIts — Engineering Intern
+May – Aug 2023
+Developed announcements, customer support, and login features for an insurance bidding platform, working with the team to improve its UI and UX.
+Technologies: JavaScript · MySQL · HTML
+
+EDUCATION
+
+Georgia Institute of Technology
+B.S. Computer Science · Artificial Intelligence & Media
+2022 – 2024
