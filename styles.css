@@ -132,7 +132,8 @@ footer > a { margin-left: auto; }
 @media screen and (min-width: 1100px) {
   .page { width: min(100% - 264px, 1100px); margin-inline: max(48px, calc((100% - 1324px) / 2)) auto; }
   .contact-links { position: fixed; z-index: 2; top: 50%; right: max(24px, calc((100% - 1324px) / 2)); transform: translateY(calc(-50% + var(--contact-offset, 0px))); flex-direction: column; align-items: stretch; flex-wrap: nowrap; gap: 6px; width: 144px; max-height: calc(100dvh - 32px); overflow: visible; margin-top: 0; border-radius: 22px; box-shadow: 0 12px 36px #23384912; }
-  .contact-links::after { content: ""; position: absolute; bottom: -9px; left: 25px; width: 16px; height: 16px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); border-bottom-right-radius: 3px; background: var(--paper); transform: skewY(-15deg) rotate(45deg); pointer-events: none; }
+  .contact-links { border-bottom-right-radius: 4px; }
+  .contact-links::after { content: ""; position: absolute; bottom: -12px; right: -1px; width: 26px; height: 18px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); border-bottom-right-radius: 100%; background: var(--paper); transform: skewX(-35deg); transform-origin: top right; pointer-events: none; }
   .contact-links a { justify-content: space-between; padding-inline: 12px; }
 }
 /* Keep every contact link reachable in unusually short desktop windows. */
