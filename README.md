@@ -18,7 +18,7 @@ Update content and structured data in `index.html`, styles in `styles.css`, and 
 
 The layout adapts to mobile and desktop and includes keyboard focus styles, section navigation, a skip link, and a print stylesheet. The animation completes in under five seconds, reserves text layout, and supports showing all text or replaying it. Scrolling keeps the animation running. Keyboard focus, navigation, and browser find reveal everything immediately. Reduced-motion visitors, direct section links, and visitors without JavaScript see the full content without animation. There is no LLM API call or generated résumé content.
 
-The introduction’s “Generate an image” control sits at the top right, with “Replay text” below the contact links. The image control reveals the supplied portrait at `assets/junseo-ha.jpg` in a small chat-style exchange. It uses native HTML disclosure, with an optional 1.2-second loading effect that is skipped for reduced motion. The image remains accessible without JavaScript; no image-generation API is called.
+The introduction’s “Generate an image” control sits at the top right, with “Replay text” below the contact links. It replaces the introduction with the supplied portrait at `assets/junseo-ha.jpg`, using a short crossfade, loading shimmer, and blur-to-clear reveal. “Hide image” restores the introduction and its contact links. A shared grid preserves the introduction’s space; its hidden links leave keyboard navigation. Native HTML disclosure and CSS support the same swap without JavaScript. Reduced-motion visitors skip the effects, and printing always includes the introduction. No image-generation API is called.
 
 ## Crawlers and automated readers
 

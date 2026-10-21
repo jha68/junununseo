@@ -4,6 +4,8 @@
 (() => {
   const studio = document.getElementById('portrait-studio');
   if (!studio) return;
+  const introduction = document.getElementById('hero-introduction');
+  const control = studio.querySelector('summary');
   const status = studio.querySelector('.portrait-status');
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let timer;
@@ -16,12 +18,25 @@
 
   studio.addEventListener('toggle', () => {
     reveal();
+    // The grid keeps the introduction's space while CSS crossfades the views.
+    // Inert also removes its links from keyboard navigation during the fade.
+    introduction.inert = studio.open;
     if (!studio.open || motion.matches) return;
     status.textContent = 'Generating an image…';
     studio.classList.add('is-generating');
     timer = window.setTimeout(reveal, 1200);
   });
   motion.addEventListener('change', event => { if (event.matches) reveal(); });
+  document.querySelector('a[href="#about"]')?.addEventListener('click', () => { studio.open = false; });
+  document.addEventListener('keydown', event => {
+    if (!studio.open) return;
+    if (event.key === 'Escape') {
+      studio.open = false;
+      control.focus({ preventScroll: true });
+    } else if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'f') {
+      studio.open = false;
+    }
+  });
   window.addEventListener('pagehide', reveal);
 })();
 
@@ -107,6 +122,9 @@
     }
 
     toggle.addEventListener('click', () => streaming ? finish() : start());
+    document.getElementById('portrait-studio')?.addEventListener('toggle', event => {
+      if (event.target.open) finish();
+    });
     // Explicit skips, keyboard focus, browser find, and printing never wait.
     // Scrolling leaves the word-by-word animation running.
     document.addEventListener('focusin', event => {

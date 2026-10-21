@@ -48,6 +48,12 @@ button { font: inherit; }
 .text-link { display: inline-block; margin-top: 36px; color: var(--muted); font-size: 11px; }
 main { min-width: 0; }
 .hero { --hero-top: 60px; position: relative; padding: var(--hero-top) 0 90px; }
+.hero-stage { display: grid; }
+.introduction-content, .portrait-studio { grid-area: 1 / 1; min-width: 0; align-self: start; }
+.introduction-content { opacity: 1; visibility: visible; transition: opacity .22s ease, filter .22s ease, transform .22s ease, visibility 0s; }
+.hero-stage:has(> .portrait-studio[open]) > .introduction-content { opacity: 0; visibility: hidden; filter: blur(5px); transform: translateY(-6px); pointer-events: none; transition: opacity .22s ease, filter .22s ease, transform .22s ease, visibility 0s .22s; }
+.portrait-label, .hero:has(.portrait-studio[open]) .introduction-label { display: none; }
+.hero:has(.portrait-studio[open]) .portrait-label { display: inline; }
 .ocean-mark, .seaweed-mark { color: var(--sea); opacity: .65; pointer-events: none; }
 .ocean-mark { position: absolute; right: 0; bottom: 12px; width: 136px; height: 68px; }
 .seaweed-mark { display: block; width: 108px; height: 94px; margin: 18px 8px -36px auto; }
@@ -72,9 +78,8 @@ h1 { margin: 0 0 24px; font: 400 clamp(60px, 7vw, 88px)/1.08 Georgia, "Times New
 .generate-image > svg { width: 18px; height: 18px; color: var(--accent); }
 .hide-image-label, .portrait-studio[open] .generate-label { display: none; }
 .portrait-studio[open] .hide-image-label { display: inline; }
-.portrait-conversation { max-width: 520px; margin-top: 26px; }
-.portrait-prompt { width: fit-content; max-width: 100%; margin: 0 0 25px auto; padding: 10px 16px; border: 1px solid var(--line); border-radius: 16px 16px 4px 16px; background: var(--tint); font-size: 13px; }
-.portrait-response > .response-label { margin: 0 0 13px; }
+.portrait-conversation { max-width: 520px; }
+.portrait-studio[open] .portrait-conversation { animation: portrait-enter .45s .15s both; }
 .portrait-card { max-width: 380px; margin: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: #fff; }
 .portrait-surface { position: relative; overflow: hidden; aspect-ratio: 1; background: var(--tint); }
 .portrait-image { display: block; width: 100%; height: auto; transition: opacity .5s ease, filter .6s ease; }
@@ -89,6 +94,7 @@ h1 { margin: 0 0 24px; font: 400 clamp(60px, 7vw, 88px)/1.08 Georgia, "Times New
 .is-generating .portrait-image { opacity: 0; filter: blur(12px); }
 @keyframes portrait-shimmer { to { background-position: -220% 0; } }
 @keyframes portrait-pulse { from { opacity: .3; transform: translateY(2px); } to { opacity: 1; transform: translateY(-2px); } }
+@keyframes portrait-enter { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 section { border-top: 1px solid var(--line); padding: 29px 0 36px; }
 .section-heading { display: flex; align-items: baseline; gap: 14px; margin-bottom: 30px; }
 .section-number { color: var(--accent); font: 10px/1.5 var(--mono); }
@@ -155,6 +161,8 @@ footer > a { margin-left: auto; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .introduction-content, .hero-stage:has(> .portrait-studio[open]) > .introduction-content { transition: none; transform: none; filter: none; }
+  .portrait-studio[open] .portrait-conversation { animation: none; }
   .portrait-image { transition: none; }
   .portrait-progress, .portrait-progress > span { animation: none; }
   .is-streaming .stream-word[data-pending] { opacity: 1; }
@@ -168,6 +176,8 @@ footer > a { margin-left: auto; }
   .layout { display: block; }
   .sidebar, .stream-toggle, .stream-cursor::after, .skip-link, .response-header, .ocean-mark, .seaweed-mark { display: none; }
   .portrait-studio { display: none; }
+  .hero-stage { display: block; }
+  .hero-stage:has(> .portrait-studio[open]) > .introduction-content { visibility: visible; opacity: 1; filter: none; transform: none; transition: none; }
   .hero { padding: 24px 0; }
   h1 { font-size: 40pt; }
   .intro { font-size: 18pt; }
