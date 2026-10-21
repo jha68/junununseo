@@ -39,8 +39,6 @@ button { font: inherit; }
 .location-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
 .layout { display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: 64px; }
 .sidebar { align-self: start; position: sticky; top: 40px; padding-top: 68px; font-size: 12px; }
-.sidebar-label { margin: 0 0 29px; font-weight: 600; }
-.sidebar-label span { color: var(--muted); font-weight: 400; }
 .sidebar nav { display: grid; gap: 6px; }
 .sidebar nav a { display: flex; gap: 14px; align-items: center; width: fit-content; min-height: 38px; text-decoration: none; }
 .nav-number { color: var(--muted); font: 10px var(--mono); }
@@ -156,7 +154,7 @@ footer > a { margin-left: auto; }
   .header-note { display: none; }
   .layout { display: block; }
   .sidebar { position: static; padding-top: 17px; }
-  .sidebar-label, .sidebar .text-link, .nav-number { display: none; }
+  .sidebar .text-link, .nav-number { display: none; }
   .sidebar nav { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0 10px; }
   .sidebar nav a { font-size: 10px; min-height: 40px; }
   .hero { --hero-top: 34px; padding: var(--hero-top) 0 24px; }
