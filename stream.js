@@ -107,11 +107,19 @@
       root.classList.add('is-streaming');
       const started = performance.now() + 120;
       const duration = Math.min(4800, Math.max(1800, words.length * 16));
+      const rampDuration = 1500;
+      const initialSpeed = 0.2;
       let revealed = 0;
 
       function tick(now) {
         try {
-          const count = Math.min(words.length, Math.floor(Math.max(0, now - started) / duration * words.length));
+          const elapsed = Math.max(0, now - started);
+          const rampElapsed = Math.min(elapsed, rampDuration);
+          // Integrate a speed ramp from 20% to the existing rate, then hold it.
+          const progressTime = initialSpeed * rampElapsed
+            + (1 - initialSpeed) * rampElapsed ** 2 / (2 * rampDuration)
+            + Math.max(0, elapsed - rampDuration);
+          const count = Math.min(words.length, Math.floor(progressTime / duration * words.length));
           if (count > revealed) {
             cursor?.classList.remove('stream-cursor');
             while (revealed < count) words[revealed++].removeAttribute('data-pending');
