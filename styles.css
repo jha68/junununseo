@@ -47,7 +47,9 @@ button { font: inherit; }
 .sidebar nav a:hover .nav-number { color: var(--accent); }
 .text-link { display: inline-block; margin-top: 36px; color: var(--muted); font-size: 11px; }
 main { min-width: 0; }
-.hero { --hero-top: 60px; position: relative; padding: var(--hero-top) 0 90px; }
+.hero { --hero-top: 60px; position: relative; padding: var(--hero-top) 0 32px; }
+/* The fish overlap the replay row; reserve their height when replay is hidden. */
+.hero:has(> .stream-toggle[hidden]) { padding-bottom: 80px; }
 .hero-stage { display: grid; }
 .introduction-content, .portrait-studio { grid-area: 1 / 1; min-width: 0; align-self: start; }
 .introduction-content { opacity: 1; visibility: visible; transition: opacity .22s ease, filter .22s ease, transform .22s ease, visibility 0s; }
@@ -149,7 +151,8 @@ footer > a { margin-left: auto; }
   .sidebar-label, .sidebar .text-link, .nav-number { display: none; }
   .sidebar nav { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0 10px; }
   .sidebar nav a { font-size: 10px; min-height: 40px; }
-  .hero { --hero-top: 34px; padding: var(--hero-top) 0 72px; }
+  .hero { --hero-top: 34px; padding: var(--hero-top) 0 24px; }
+  .hero:has(> .stream-toggle[hidden]) { padding-bottom: 62px; }
   .ocean-mark { bottom: 6px; width: 112px; height: 56px; }
   .seaweed-mark { width: 88px; height: 76px; margin-bottom: -30px; }
   .response-header { margin-bottom: 28px; }
@@ -167,6 +170,7 @@ footer > a { margin-left: auto; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .hero { padding-bottom: 80px; }
   .contact-links { --contact-offset: 0px !important; }
   .introduction-content, .hero-stage:has(> .portrait-studio[open]) > .introduction-content { transition: none; transform: none; filter: none; }
   .portrait-studio[open] .portrait-conversation { animation: none; }
@@ -186,7 +190,7 @@ footer > a { margin-left: auto; }
   .hero-stage { display: block; }
   .hero-stage:has(> .portrait-studio[open]) > .introduction-content { visibility: visible; opacity: 1; filter: none; transform: none; transition: none; }
   .contact-links { padding: 0; border: 0; box-shadow: none; break-inside: avoid; }
-  .hero { padding: 24px 0; }
+  .hero, .hero:has(> .stream-toggle[hidden]) { padding: 24px 0; }
   h1 { font-size: 40pt; }
   .intro { font-size: 18pt; }
   section { padding: 20px 0; }
