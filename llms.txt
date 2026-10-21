@@ -6,6 +6,8 @@
 
 - [Full plain-text portfolio](https://junununseo.com/portfolio.txt): Introduction, education, engineering experience, all four projects, skills, and contact information. No JavaScript or interaction required.
 - [Website](https://junununseo.com/): The same portfolio in semantic HTML, with ProfilePage and Person JSON-LD. Text is present in the initial response; the optional entrance animation does not generate content.
+- [한국어 포트폴리오](https://junununseo.com/ko/): 소개, 학력, 경력, 프로젝트, 기술 및 연락처를 담은 전체 한국어 버전. 상단의 English / 한국어 버튼으로 언어를 전환할 수 있으며, 모든 본문은 JavaScript 없이도 읽을 수 있습니다.
+- [한국어 텍스트 포트폴리오](https://junununseo.com/ko/portfolio.txt): 한국어 페이지와 동일한 포트폴리오를 제공하는 일반 텍스트 버전.
 - [Portrait](https://junununseo.com/assets/junseo-ha.jpg): Original photograph of Junseo Ha. The website’s playful “Generate an image” control replaces the introduction with this photo; “Hide image” restores the introduction. This interaction does not call an image-generation service.
 
 ## Sections

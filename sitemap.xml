@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://junununseo.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://junununseo.com/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://junununseo.com/ko/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junununseo.com/" />
+  </url>
+  <url>
+    <loc>https://junununseo.com/ko/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://junununseo.com/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://junununseo.com/ko/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://junununseo.com/" />
   </url>
 </urlset>

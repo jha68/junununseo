@@ -7,13 +7,16 @@
   const introduction = document.getElementById('hero-introduction');
   const control = studio.querySelector('summary');
   const status = studio.querySelector('.portrait-status');
+  const messages = document.documentElement.lang === 'ko'
+    ? { ready: '이름과 함께 제 얼굴도 소개합니다.', generating: '이미지 생성 중…' }
+    : { ready: 'Here’s a face to go with the name.', generating: 'Generating an image…' };
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let timer;
 
   function reveal() {
     window.clearTimeout(timer);
     studio.classList.remove('is-generating');
-    status.textContent = 'Here’s a face to go with the name.';
+    status.textContent = messages.ready;
   }
 
   studio.addEventListener('toggle', () => {
@@ -22,7 +25,7 @@
     // Inert also removes its links from keyboard navigation during the fade.
     introduction.inert = studio.open;
     if (!studio.open || motion.matches) return;
-    status.textContent = 'Generating an image…';
+    status.textContent = messages.generating;
     studio.classList.add('is-generating');
     timer = window.setTimeout(reveal, 1200);
   });
@@ -44,6 +47,9 @@
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const toggle = document.getElementById('stream-toggle');
   const root = document.documentElement;
+  const messages = root.lang === 'ko'
+    ? { replay: '텍스트 다시 보기', show: '전체 텍스트 보기' }
+    : { replay: 'Replay text', show: 'Show all text' };
   const words = [];
   let streaming = false;
   let frame;
@@ -57,7 +63,7 @@
     window.clearTimeout(watchdog);
     cursor?.classList.remove('stream-cursor');
     cursor = null;
-    toggle.textContent = 'Replay text';
+    toggle.textContent = messages.replay;
   }
 
   // Nothing is animated for reduced motion, a direct section link, or a
@@ -92,7 +98,7 @@
       if (motion.matches || !words.length) return;
       finish();
       for (const word of words) word.setAttribute('data-pending', '');
-      toggle.textContent = 'Show all text';
+      toggle.textContent = messages.show;
       toggle.hidden = false;
       streaming = true;
       // Schedule the safety reset before hiding any words. Even an interrupted
@@ -160,6 +166,17 @@
     finish();
     toggle.hidden = true;
   }
+})();
+
+// Keep the current section when switching languages. The links also work
+// without JavaScript and each destination contains its complete translation.
+(() => {
+  const links = document.querySelectorAll('[data-language]');
+  function syncSection() {
+    for (const link of links) link.hash = window.location.hash;
+  }
+  syncSection();
+  window.addEventListener('hashchange', syncSection);
 })();
 
 // Let the fixed contact panel gently trail scrolling, then return to center.

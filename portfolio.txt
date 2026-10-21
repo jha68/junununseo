@@ -1,5 +1,6 @@
 Junseo Ha — Software Engineer
 Website: https://junununseo.com/
+한국어: https://junununseo.com/ko/portfolio.txt
 Location: Seoul, South Korea
 Email: beap0301@gmail.com
 GitHub: https://github.com/jha68
