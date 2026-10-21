@@ -88,7 +88,8 @@ h1 { margin: 0 0 24px; font: 400 clamp(60px, 7vw, 88px)/1.08 Georgia, "Times New
 .portrait-studio[open] .hide-image-label { display: inline; }
 .portrait-conversation { max-width: 520px; }
 .portrait-studio[open] .portrait-conversation { animation: portrait-enter .45s .15s both; }
-.portrait-card { max-width: 380px; margin: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: #fff; }
+/* Fit the photo, caption, and note within the introduction's natural height. */
+.portrait-card { max-width: 190px; margin: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: #fff; }
 .portrait-surface { position: relative; overflow: hidden; aspect-ratio: 1; background: var(--tint); }
 .portrait-image { display: block; width: 100%; height: auto; transition: opacity .5s ease, filter .6s ease; }
 .portrait-card figcaption { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 49px; padding: 12px 15px; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; }

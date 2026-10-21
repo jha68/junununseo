@@ -8,8 +8,8 @@
   const control = studio.querySelector('summary');
   const status = studio.querySelector('.portrait-status');
   const messages = document.documentElement.lang === 'ko'
-    ? { ready: '이름과 함께 제 얼굴도 소개합니다.', generating: '이미지 생성 중…' }
-    : { ready: 'Here’s a face to go with the name.', generating: 'Generating an image…' };
+    ? { ready: '궁금하실까 봐 제 얼굴도 보여드려요', generating: '이미지 생성 중…' }
+    : { ready: "Here's my face in case you wondered", generating: 'Generating an image…' };
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let timer;
 
