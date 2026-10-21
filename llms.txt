@@ -10,7 +10,7 @@
 
 ## Sections
 
-- [Education](https://junununseo.com/#education): B.S. Computer Science, Artificial Intelligence & Media, Georgia Institute of Technology, January 2022–December 2024. Overall GPA: 3.77/4.0; major GPA: 3.87/4.0. Georgia State University, Atlanta, GA: majored in Computer Science. Overall GPA: 4.07/4.3; major GPA: 4.08/4.3.
+- [Education](https://junununseo.com/#education): B.S. Computer Science, Artificial Intelligence & Media, Georgia Institute of Technology, January 2022–December 2024. Overall GPA: 3.77/4.0; major GPA: 3.87/4.0. Georgia State University, Atlanta, GA, August 2019–December 2021: majored in Computer Science. Overall GPA: 4.07/4.3; major GPA: 4.08/4.3.
 - [Experience](https://junununseo.com/#experience): Republic of Korea Navy, AI Developer (Military Service) and LLM Project Lead (June 2025–present), leading a Navy-wide LLM assistant and representing a seven-developer team; Aimgonna (January–June 2025), improving routing accuracy from 70% to 92% and category-match scores from 38% to 52%; and NextIts (May–August 2023).
 - [Selected projects](https://junununseo.com/#projects): Anchorive; ARC reasoning agent, which achieved the highest class score at 3× the runner-up; TerraVision; and New York Taxi Data Analysis.
 - [Skills](https://junununseo.com/#skills): Java, Python, C, C#, JavaScript, TypeScript; Vue, React, LangGraph, LangSmith, FastAPI, Pydantic, vLLM; MySQL, PostgreSQL, Qdrant, HTML, CSS, Unity, Android Studio, Git, Docker. Korean (native) and English (professional).
