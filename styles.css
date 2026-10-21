@@ -65,8 +65,8 @@ main { min-width: 0; }
 h1 { margin: 0 0 24px; font: 400 clamp(60px, 7vw, 88px)/1.08 Georgia, "Times New Roman", serif; letter-spacing: -.06em; }
 .intro { margin: 0 0 21px; font-size: clamp(22px, 2.8vw, 30px); line-height: 1.45; font-weight: 400; letter-spacing: -.035em; }
 .bio { max-width: 520px; margin: 0; color: var(--muted); font-size: 15px; line-height: 1.8; }
-.contact-links { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 25px; margin-top: 28px; font-size: 12px; }
-.contact-links a { display: inline-flex; gap: 10px; align-items: center; padding: 6px 0; }
+.contact-links { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 22px; width: fit-content; max-width: 100%; margin-top: 28px; padding: 14px; border: 1px solid var(--line); border-radius: 12px; background: var(--paper); box-shadow: 0 8px 28px #2338490a; font-size: 12px; }
+.contact-links a { display: inline-flex; gap: 10px; align-items: center; min-height: 44px; padding: 6px 4px; }
 .contact-links .primary-link { border: 1px solid var(--accent); border-radius: 5px; padding: 8px 15px; background: var(--accent); color: var(--paper); text-decoration: none; }
 .contact-links .primary-link:hover { background: #245261; }
 .portrait-studio { margin-top: 0; }
@@ -125,7 +125,13 @@ footer > a { margin-left: auto; }
 .stream-word { position: relative; }
 .stream-cursor::after { content: ""; position: absolute; left: calc(100% + 2px); bottom: .08em; width: 2px; height: .95em; background: var(--accent); pointer-events: none; }
 
-@media (min-width: 1500px) { .page { width: min(100% - 120px, 1180px); } .layout { gap: 96px; } }
+/* Reserve a right rail so the floating panel never covers portfolio content. */
+@media screen and (min-width: 1100px) {
+  .page { width: min(100% - 264px, 1100px); margin-inline: max(48px, calc((100% - 1324px) / 2)) auto; }
+  .contact-links { position: fixed; z-index: 2; top: 50%; right: max(24px, calc((100% - 1324px) / 2)); transform: translateY(-50%); flex-direction: column; align-items: stretch; flex-wrap: nowrap; gap: 6px; width: 144px; max-height: calc(100dvh - 32px); overflow-y: auto; margin-top: 0; box-shadow: 0 12px 36px #23384912; }
+  .contact-links a { justify-content: space-between; padding-inline: 12px; }
+}
+@media (min-width: 1500px) { .layout { gap: 96px; } }
 @media (max-width: 1000px) {
   .page { width: calc(100% - 64px); }
   .layout { grid-template-columns: 155px minmax(0, 1fr); gap: 38px; }
@@ -150,7 +156,7 @@ footer > a { margin-left: auto; }
   h1 { font-size: clamp(58px, 12vw, 76px); }
   .intro { font-size: 25px; }
   .bio { font-size: 14px; }
-  .contact-links { gap: 12px 22px; }
+  .contact-links { gap: 8px 16px; }
   section { padding: 25px 0 30px; }
   .section-heading { margin-bottom: 25px; }
   .job-heading { align-items: start; }
@@ -178,6 +184,7 @@ footer > a { margin-left: auto; }
   .portrait-studio { display: none; }
   .hero-stage { display: block; }
   .hero-stage:has(> .portrait-studio[open]) > .introduction-content { visibility: visible; opacity: 1; filter: none; transform: none; transition: none; }
+  .contact-links { padding: 0; border: 0; box-shadow: none; break-inside: avoid; }
   .hero { padding: 24px 0; }
   h1 { font-size: 40pt; }
   .intro { font-size: 18pt; }
