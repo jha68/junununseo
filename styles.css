@@ -47,13 +47,13 @@ button { font: inherit; }
 .sidebar nav a:hover .nav-number { color: var(--accent); }
 .text-link { display: inline-block; margin-top: 36px; color: var(--muted); font-size: 11px; }
 main { min-width: 0; }
-.hero { position: relative; padding: 60px 0 90px; }
+.hero { --hero-top: 60px; position: relative; padding: var(--hero-top) 0 90px; }
 .ocean-mark, .seaweed-mark { color: var(--sea); opacity: .65; pointer-events: none; }
 .ocean-mark { position: absolute; right: 0; bottom: 12px; width: 136px; height: 68px; }
 .seaweed-mark { display: block; width: 108px; height: 94px; margin: 18px 8px -36px auto; }
-.response-header { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px 14px; min-height: 32px; margin-bottom: 34px; }
+.response-header { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px 14px; min-height: 42px; margin-bottom: 34px; padding-right: 180px; }
 .response-label { display: flex; align-items: center; gap: 10px; color: var(--muted); font: 11px var(--mono); }
-.stream-toggle { border: 1px solid var(--line); border-radius: 5px; padding: 6px 10px; background: transparent; color: var(--muted); cursor: pointer; font: 11px/1.6 var(--mono); }
+.stream-toggle { margin-top: 22px; border: 1px solid var(--line); border-radius: 5px; padding: 6px 10px; background: transparent; color: var(--muted); cursor: pointer; font: 11px/1.6 var(--mono); }
 .stream-toggle:hover { border-color: var(--accent); color: var(--accent); background: var(--tint); }
 .eyebrow { margin: 0 0 12px; color: var(--accent); font: 10px/1.7 var(--mono); letter-spacing: .09em; text-transform: uppercase; }
 h1 { margin: 0 0 24px; font: 400 clamp(60px, 7vw, 88px)/1.08 Georgia, "Times New Roman", serif; letter-spacing: -.06em; }
@@ -63,8 +63,8 @@ h1 { margin: 0 0 24px; font: 400 clamp(60px, 7vw, 88px)/1.08 Georgia, "Times New
 .contact-links a { display: inline-flex; gap: 10px; align-items: center; padding: 6px 0; }
 .contact-links .primary-link { border: 1px solid var(--accent); border-radius: 5px; padding: 8px 15px; background: var(--accent); color: var(--paper); text-decoration: none; }
 .contact-links .primary-link:hover { background: #245261; }
-.portrait-studio { margin-top: 22px; }
-.generate-image { display: flex; align-items: center; gap: 9px; width: fit-content; min-height: 42px; padding: 8px 14px; border: 1px solid var(--line); border-radius: 24px; background: #ffffffb3; color: var(--ink); cursor: pointer; list-style: none; font-size: 12px; }
+.portrait-studio { margin-top: 0; }
+.generate-image { position: absolute; top: var(--hero-top); right: 0; display: flex; align-items: center; gap: 9px; width: fit-content; min-height: 42px; padding: 8px 14px; border: 1px solid var(--line); border-radius: 24px; background: #ffffffb3; color: var(--ink); cursor: pointer; list-style: none; font-size: 12px; }
 .generate-image::-webkit-details-marker { display: none; }
 .generate-image::marker { content: ""; }
 .generate-image:hover { border-color: var(--accent); background: var(--tint); color: var(--accent); }
@@ -137,7 +137,7 @@ footer > a { margin-left: auto; }
   .sidebar-label, .sidebar .text-link, .nav-number { display: none; }
   .sidebar nav { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0 10px; }
   .sidebar nav a { font-size: 10px; min-height: 40px; }
-  .hero { padding: 34px 0 72px; }
+  .hero { --hero-top: 34px; padding: var(--hero-top) 0 72px; }
   .ocean-mark { bottom: 6px; width: 112px; height: 56px; }
   .seaweed-mark { width: 88px; height: 76px; margin-bottom: -30px; }
   .response-header { margin-bottom: 28px; }
