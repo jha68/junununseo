@@ -23,7 +23,6 @@ EXPERIENCE
 
 Republic of Korea Navy — AI Developer (Military Service) · LLM Project Lead
 Jun 2025 – Present
-Expected service completion: Feb 2027
 Lead development of a Navy-wide LLM assistant for administrative workflows and knowledge retrieval. Represent a seven-developer team in meetings with Navy generals and senior leadership to propose technical designs, development plans, and project direction.
 Established Open WebUI and context-aware LLM pipelines. Built an intelligent RAG router and selective policy injection to reduce unnecessary context use, plus a military terminology module for document comprehension and drafting. Implemented image search and MMR retrieval to reduce redundant chunks and improve retrieval diversity and relevance.
 Technologies: Open WebUI · RAG · Maximal Marginal Relevance (MMR)
@@ -40,8 +39,7 @@ Technologies: JavaScript · MySQL · HTML
 
 SELECTED PROJECTS
 
-Anchorive — LLM document review prototype
-LLM Pipeline Developer | Mar – Jun 2026
+Anchorive
 Built multi-stage review workflows and benchmarked 20+ open-source LLMs. Designed a LangGraph workflow for structured handover documents with source traceability and schema validation. Specified human review and scoped revisions with patch validation, preservation of user edits, and versioned history.
 Technologies: Python · FastAPI · OpenRouter · Pydantic · LangGraph
 
