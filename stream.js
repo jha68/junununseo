@@ -121,7 +121,15 @@
       frame = window.requestAnimationFrame(tick);
     }
 
-    toggle.addEventListener('click', () => streaming ? finish() : start());
+    toggle.addEventListener('click', () => {
+      if (streaming) {
+        finish();
+      } else {
+        const studio = document.getElementById('portrait-studio');
+        if (studio) studio.open = false;
+        start();
+      }
+    });
     document.getElementById('portrait-studio')?.addEventListener('toggle', event => {
       if (event.target.open) finish();
     });
@@ -152,4 +160,52 @@
     finish();
     toggle.hidden = true;
   }
+})();
+
+// Let the fixed contact panel gently trail scrolling, then return to center.
+(() => {
+  const panel = document.querySelector('.contact-links');
+  if (!panel) return;
+  const motion = window.matchMedia('(min-width: 1100px) and (prefers-reduced-motion: no-preference)');
+  let lastScroll = window.scrollY;
+  let offset = 0;
+  let frame = 0;
+  let lastTime = 0;
+
+  function reset() {
+    window.cancelAnimationFrame(frame);
+    frame = 0;
+    offset = 0;
+    lastScroll = window.scrollY;
+    panel.style.removeProperty('--contact-offset');
+  }
+
+  function settle(now) {
+    const elapsed = Math.min(now - lastTime, 64);
+    lastTime = now;
+    offset *= Math.exp(-elapsed / 150);
+    if (Math.abs(offset) < 0.1) {
+      reset();
+      return;
+    }
+    panel.style.setProperty('--contact-offset', `${offset.toFixed(2)}px`);
+    frame = window.requestAnimationFrame(settle);
+  }
+
+  window.addEventListener('scroll', () => {
+    const delta = window.scrollY - lastScroll;
+    lastScroll = window.scrollY;
+    if (!motion.matches) return;
+    const limit = Math.min(36, Math.max(0, (window.innerHeight - panel.offsetHeight) / 2 - 16));
+    offset = Math.max(-limit, Math.min(limit, offset - delta * 0.3));
+    panel.style.setProperty('--contact-offset', `${offset.toFixed(2)}px`);
+    if (!frame) {
+      lastTime = performance.now();
+      frame = window.requestAnimationFrame(settle);
+    }
+  }, { passive: true });
+  motion.addEventListener('change', reset);
+  window.addEventListener('resize', reset);
+  window.addEventListener('pagehide', reset);
+  document.addEventListener('visibilitychange', () => { if (document.hidden) reset(); });
 })();
