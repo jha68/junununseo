@@ -91,6 +91,10 @@ h1 { margin: 0 0 24px; font: 400 clamp(60px, 7vw, 88px)/1.08 Georgia, "Times New
 .portrait-surface { position: relative; overflow: hidden; aspect-ratio: 1; background: var(--tint); }
 .portrait-image { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; transition: opacity .5s ease, filter .6s ease; }
 .portrait-card figcaption { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 49px; padding: 12px 15px; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; }
+/* Reserve the ready caption's wrapped height while the shorter status is shown. */
+.portrait-caption { display: grid; min-width: 0; }
+.portrait-caption > span { grid-area: 1 / 1; align-self: center; }
+.portrait-caption-reserve { visibility: hidden; }
 .portrait-format { flex: none; color: var(--accent); font: 10px var(--mono); }
 .portrait-note { margin: 10px 0 0; color: var(--muted); font-size: 11px; }
 .portrait-progress { display: none; position: absolute; inset: 0; align-items: center; justify-content: center; gap: 7px; background: linear-gradient(115deg, var(--tint), #ffffffb3, var(--tint)); background-size: 220% 100%; animation: portrait-shimmer 1.6s linear infinite; }
